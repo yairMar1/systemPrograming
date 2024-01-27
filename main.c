@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "NumClass.h"
 int main(){
 
@@ -14,22 +15,26 @@ scanf("%d", &number2);
 
 printf("prime:");
 for(int i= number1; i<=number2;i++){
-    if(isPrime(i)){printf("%d",i);}}
+    if(isPrime(i)){printf("%d",i);}
+    printf(" ");}
     printf("\n");
 
 printf("Armstrong:");
 for(int i= number1; i<=number2;i++){
-    if(isArmstrong(i)){printf("%d",i);}}
+    if(isArmstrong(i)){printf("%d",i);}
+    printf(" ");}
     printf("\n");
 
 printf("strong:");
 for(int i= number1; i<=number2;i++){
-    if(isStrong(i)){printf("%d",i);}}
+    if(isStrong(i)){printf("%d",i);}
+    printf(" ");}
     printf("\n");
 
 printf("palindrom:");
 for(int i= number1; i<=number2;i++){
-    if(isPalindrome(i)){printf("%d",i);}}
+    if(isPalindrome(i)){printf("%d",i);}
+    printf(" ");}
 printf("\n");
 
 return 0;

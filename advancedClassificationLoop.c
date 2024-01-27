@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "NumClass.h"
 
 int powerOf10(int exponent) {

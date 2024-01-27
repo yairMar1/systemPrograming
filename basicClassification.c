@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "NumClass.h"
 
 int isPrime(int x){
@@ -11,20 +12,26 @@ return 1;
 }
 
 int isStrong(int x) {
+    int original = x;
     int sum = 0;
 
     while (x >= 1) {
         int rightDigit = x % 10;
         int factorial = 1;
 
-        for (int i = 1; i <= rightDigit; i++) {factorial = factorial * i;}// Calculate the factorial of rightDigit
+        for (int i = 1; i <= rightDigit; i++) {
+            factorial = factorial * i;
+        }
 
         sum += factorial;
 
-        if (sum > x) {return 0;}
+        if (sum > original) {
+            return 0;
+        }
 
         x /= 10;
     }
 
-    return (sum == x) ? 1 : 0;// if sum equal to x, it return 1 else 0
+    return (sum == original) ? 1 : 0;
 }
+

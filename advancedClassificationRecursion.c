@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "NumClass.h"
 
 int power(int base, int exponent) {
@@ -32,26 +33,37 @@ int isArmstrong(int x) {
 
     return isArmstrongHelper(x, x, counter, 0);
 }
+int powerOf10(int exponent) {
+    int result = 1;
+    for (int i = 0; i < exponent; i++) {
+        result *= 10;
+    }
+    return result;
+}
 
 int isPalindromeHelper(int p, int z, int counter) {
-    if (counter == 0) {return 1;}
-    
-    else {
+    if (counter <= 1) {
+        return 1;
+    } else {
         int h = p % 10;
-        int b = z / powerOf10(counter - 1);
+        int b = (z / powerOf10(counter - 1)) % 10;
 
-        if (h != b) {return 0;}
+        if (h != b) {
+            return 0;
+        }
 
-        return isPalindromeHelper(p / 10, (z / powerOf10(counter - 1)%10), counter - 1);
+        return isPalindromeHelper(p / 10, z / 10, counter - 2);
     }
 }
+
+
 
 int isPalindrome(int x) {
     int counter = 0;
     int y = x;
     int z = x;
 
-    while (y >= 1) { // how many digits the number has
+    while (y >= 1) {
         y /= 10;
         counter++;
     }
