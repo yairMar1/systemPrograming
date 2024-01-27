@@ -47,7 +47,8 @@ libclassloops.so: main.o basicClassification.o advancedClassificationLoop.o
 
 
 
-main.o: NumClass.h
+main.o: NumClass.h main.c
+	gcc -Wall -c -o main.o main.c
 basicClassification.o: NumClass.h
 advancedClassificationLoop.o: NumClass.h
 advancedClassificationRecursion.o: NumClass.h

@@ -13,25 +13,25 @@ printf("enter a number2: ");
 scanf("%d", &number2);
 
 
-printf("prime:");
+printf("The Prime numbers are:");
 for(int i= number1; i<=number2;i++){
     if(isPrime(i)){printf("%d",i);}
     printf(" ");}
     printf("\n");
 
-printf("Armstrong:");
+printf("The Armstrong numbers are:");
 for(int i= number1; i<=number2;i++){
     if(isArmstrong(i)){printf("%d",i);}
     printf(" ");}
     printf("\n");
 
-printf("strong:");
+printf("The Strong numbers are:");
 for(int i= number1; i<=number2;i++){
     if(isStrong(i)){printf("%d",i);}
     printf(" ");}
     printf("\n");
 
-printf("palindrom:");
+printf("The Palindromes are:");
 for(int i= number1; i<=number2;i++){
     if(isPalindrome(i)){printf("%d",i);}
     printf(" ");}
