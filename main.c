@@ -6,12 +6,10 @@ int main(){
 int number1 = 0;
 int number2 = 0;
 
-//printf("enter a number1: ");
+//Accepting variables from the user
 scanf("%d" "%d", &number1 ,&number2);
 
-//printf("enter a number2: ");
-//scanf("%d", &number2);
-
+//Printing the functions we prepared
 printf("The Armstrong numbers are:");
 for(int i= number1; i<=number2;i++){
     if(isArmstrong(i)){printf(" %d",i);}

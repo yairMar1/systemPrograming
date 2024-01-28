@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "NumClass.h"
 
+//A helper function, which helps to divide a number to get to the left digit
 int powerOf10(int exponent) {
     int result = 1;
     for (int i = 0; i < exponent; i++) {
@@ -36,7 +37,7 @@ int isPalindrome(int x) {
 }
 
 
- 
+ //A helper function that calculates strongly
  int power(int base, int exponent) {
     if (exponent == 0) {return 1;}
     
@@ -54,7 +55,7 @@ int isPalindrome(int x) {
     int y = x;
     int z = x;
 
-    while (y >= 1) {
+    while (y >= 1) {// how many digits the number has
         y /= 10;
         counter++;
     }
@@ -67,7 +68,7 @@ int isPalindrome(int x) {
         if (x < arm) {
             return 0;
         }
-        z /= 10;  // corrected syntax
+        z /= 10; 
     }
 
     return (arm == x) ? 1 : 0;

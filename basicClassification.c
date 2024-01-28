@@ -23,7 +23,7 @@ int isStrong(int x) {
             factorial = factorial * i;
         }
 
-        sum += factorial;
+        sum += factorial;//Each iteration the terms are summed (after we have made a power for the term)
 
         if (sum > original) {
             return 0;
