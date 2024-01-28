@@ -7,10 +7,10 @@ int number1 = 0;
 int number2 = 0;
 
 //printf("enter a number1: ");
-scanf("%d", &number1);
+scanf("%d" "%d", &number1 ,&number2);
 
 //printf("enter a number2: ");
-scanf("%d", &number2);
+//scanf("%d", &number2);
 
 printf("The Armstrong numbers are: ");
 for(int i= number1; i<=number2;i++){
